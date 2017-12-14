@@ -1,0 +1,196 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Curriculum Vitae
+%
+% Source: http://www.howtotex.com/
+% Feel free to distribute this template, but please keep the
+% referal to HowToTeX.com.
+% Date: July 2011
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+							
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+	\textheight=700px                    % Saving trees ;-)
+\usepackage{url}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%			            % Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}			% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}		       % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}			   % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value	
+		
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \hfill      % Study
+		\colorbox{black}
+        {%
+			\parbox{6em}{%
+			\hfill\color{white}#2}} \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+		\colorbox{Black}{\color{White}#2} \par  % Duration
+		\noindent \textit{#3} \par              % Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+% you can upload a photo and include it here...
+%\begin{wrapfigure}{l}{0.5\textwidth}
+%	\vspace*{-2em}
+%		\includegraphics[width=0.15\textwidth]{photo}
+%\end{wrapfigure}
+
+\MyName{Rahul Bansal}
+\sepspace
+
+%%% Personal details
+%%% ------------------------------------------------------------
+\NewPart{Personal details}{}
+
+\PersonalEntry{Birth}{October 16, 1993}
+\PersonalEntry{Address}{B1 428 Sls Splendor, Banglore}
+\PersonalEntry{Phone}{(+91) 7897-580-575}
+\PersonalEntry{Mail}{\url{bansal.rahul14@gmail.com}}
+\PersonalEntry{Github}{\url{https://github.com/r-a-x}}
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+
+\EducationEntry{BTech, Information Technology}{2012-2016}{Motilal Nehru National Institute of Technology}{CGPA of 8.01.}
+%\sepspace
+
+%%% Work experience
+%%% ------------------------------------------------------------
+\NewPart{Work experience}{}
+
+\EducationEntry{Software Developer}{2016 - present}{Directi Web Technology Pvt. Ltd}{
+	\begin{itemize}
+  	\item Automated the Functional tests resulting in decreased shipping time of new features.
+  	\item Implemented the OAuth 2 based authentication service having the support for the Google and Github based login and signup resulting in 90\% signups having email verified.
+  	\item Implemented product white labeling, allowing the product to be customized by other brands.
+  	\item Implemented certain requirements for the PCI, which made the app more secure by dockerizing and preventing the attacks 		like SQL injection, Heap Inspection etc.
+	\end{itemize}
+    
+	\sepspace
+
+	\EducationEntry{Software Developer Intern}{Summer 2015}{Directi Web Technology Pvt. Ltd}{
+	\begin{itemize}
+  	\item Automated the app deployment process on live and staging servers, resulting in decreased shipping time of features.
+  	\item Added the honey pot on the website thus preventing bots from querrying whois service.
+  	\item Converted the synchronous mail sending api call to asynchronous api using Active MQ.
+	\end{itemize}
+	}
+ }
+
+%%% Projects
+%%% ------------------------------------------------------------
+\NewPart{Projects}{}
+\EducationEntry{Mlocker}{July - Dec 15}{Android app}{
+\begin{itemize}
+  \item Created an android app which allowed user to login to websites without passwords, by scanning a qr code thus eliminating the need to remember passwords.
+  \end{itemize}
+ }
+\sepspace
+
+\EducationEntry{Plagiarism Detection System}{Jan - July 15}{Winnowing algorithm implementation}{
+\begin{itemize}
+  \item Implemented a python project of k hash winnowing algorithm for document fingerprinting for finding the plagiarism in the class assignments and displaying the result in html page.
+\end{itemize}
+}
+\sepspace
+
+\EducationEntry{Blitz OS}{Jan - July 14}{Instructional OS}{
+\begin{itemize}
+  \item Implemented mutex, semaphores, process manager and sys calls in instructional blitz os.
+\end{itemize}
+
+\sepspace
+\EducationEntry{Peer to peer chat client}{Jan - July 13}{Java based chat software}{
+\begin{itemize}
+  \item Implemented a java based app that allowed single, multi users chat and sending of emoticons and files.
+\end{itemize}
+}
+ }
+
+
+%%% Skills
+%%% ------------------------------------------------------------
+\NewPart{Skills}{}
+
+\SkillsEntry{Languages}{Java, C/C++, python}
+\SkillsEntry{Tech}{Springboot, Postgres, Linux, Git}
+\SkillsEntry{Others}{Algorithms, Data Structures, Competitive Programming}
+
+
+
+%%% Achievements
+%%% ------------------------------------------------------------
+\NewPart{Achievements}{}
+\begin{itemize}
+  \item Founded \textbf{Samvesh}, a social project aimed at giving employment to underprivileged women.
+  \item  \textbf{2nd} place at Mechrocosm in Avishkar 2k12, Annual Tech Fest of NIT-A. 
+  \item  \textbf{3rd} place at i-robot in Technex 2k13, Annual Tech Fest of IIT-BHU.
+  \item  \textbf{Consolation} in Tuxwars in Technex 2k13, Annual Tech Avishkar 2k13, Annual Tech Fest of NIT-A. 
+  \item  \textbf{2nd} place at Mechrocosm in Avishkar 2k12, Annual Tech Fest of NIT-A. 
+  \end{itemize} 
+\end{document}
