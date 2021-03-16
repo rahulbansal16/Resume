@@ -82,6 +82,8 @@ ItalicFont = Fontin-Italic.otf
     \textsc{email:}     & \href{mailto:bansal.rahul14@gmail.com}{bansal.rahul14@gmail.com}
 \end{tabular}
 
+
+
 %Section: Work Experience at the top
 \section{Work Experience}
 \begin{tabular}{r|p{11cm}}
@@ -91,11 +93,13 @@ ItalicFont = Fontin-Italic.otf
  
  \item  {Prototyped the migration of search component of Teams from angular to react.}  
  
- \item  {Added telemetry for measuring the Click Through Rate(CTR) of search results, search session success, etc. in Teams app.}
+%  \item  {Added telemetry for measuring the Click Through Rate(CTR) of search results, search session success, etc. in Teams app.}
  
  \item {Implemented \textsc{MTMA} for search which allowed people belonging to more than one organization to switch to their different organization profile in Teams without logging out.}
  
- \item {Rewrote major chunk of the JavaSscript codebase of \textsc{Cortana} for \textsc{Teams} which is an \textsc{AI} based personal assistant of \textsc{Microsoft} to use the web assembly based websdk and added various enhancements, got promotion because of this. }
+ \item {Rewrote major chunk of the Javascript cod of \textsc{Cortana} for \textsc{Teams} which is an \textsc{AI} based personal assistant of \textsc{Microsoft} to use the web assembly based websdk and added various enhancements, got promotion because of this. }
+ \item { Migrated the API for fetching the images to a robust image fetching API and created settings page for Teams for Life}
+%  \item{ Created settings page for the Teams For Life}
  
 \end{itemize}
  
@@ -134,6 +138,7 @@ ItalicFont = Fontin-Italic.otf
 \end{tabular}
 
 %Section: Education
+
 \section{Education}
 \begin{tabular}{rl}	
  \textsc{April} 2016 & Bachelor of Technology in \textsc{Information Technology}, \textbf{NIT}, Allahabad
@@ -141,11 +146,13 @@ ItalicFont = Fontin-Italic.otf
 &\normalsize \textsc{Gpa}: 8.1\hyperlink{grds}{\hfill  \footnotesize }
 \\&\\
 \end{tabular}
+
+
 \section{Skills}
 \begin{tabular}{rl}
- Language:& \textsc{java}, \textsc{python}, \textsc{c/c++}, \textsc{javascript}
+ Language:& \textsc{javascript}, \textsc{c/c++} \textsc{java} \textsc{python}
  \\
- Frameworks:& \textsc{springboot}, \textsc{react}, \textsc{git}, \textsc{opencv}
+ Frameworks:& \textsc{react}, \textsc{angular}, \textsc{git}, \textsc{springboot}
 \\
 Other:& Algorithms, Datastructures, Blockchain
 \\
